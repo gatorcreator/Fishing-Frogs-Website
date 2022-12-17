@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+:root{
+    --primary-color: rgb(175, 201, 184);
+}
+
+html { 
+    scroll-behavior: smooth; 
+} 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+h1, h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px, 0px;
+}
+
+p{
+    margin: 10px, 0px;
+}
+
+img{
+    width: 100%;
+}
+
+.hidden{
+    visibility: hidden;
+    height: 0; 
+}
+
+/* Navbar */
+.navbar{
+    background-color: var(--primary-color);
+    color:white;
+    height: 70px;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px white solid;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+}
+
+/* Showcase */
+.showcase{
+    height: 100vh;
+    background-color: var(--primary-color);
+    color: white;
+    position: relative;
+    padding-bottom: 75px;
+}
+
+.showcase .grid{
+    overflow: visible; 
+    grid-template-columns: 45% 55%;
+}
+
+.showcase .title-text{
+    display: block;
+    text-align: left;
+    color: white;
+}
+
+.meta{
+    width: max-content;
+    gap: 10px;
+}
+
+.metamask{
+    width: 35px;
+    height: 35px;
+}
+
+/* Collection */
+.collection{
+    padding: 75px 0;
+}
+
+.collection .grid{
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.collection .grid > *:first-child{
+    grid-column: 1/ span 3;
+}
+
+.collection .grid > *:last-child{
+    grid-column: 2/ span 1;
+    grid-row: 7/ span 1;
+}
+
+.collection .btn{
+    color: #333;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.collection .btn-outline{
+    background-color: transparent;
+    border: 2px var(--primary-color) solid;
+}
+
+/* Community */
+.community{
+    height: 875px;
+    padding: 75px 0;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.community .grid{
+    gap: 50px;
+}
+
+.community .grid >*:first-child{
+    grid-column: 1/ span 2;
+}
+
+.community .grid >*:last-child{
+    grid-column: 1/ span 2;
+}
+
+.community .title-text{
+    color: white;
+}
+
+.map-text{
+    font-size: 20px;
+    padding: 0 0 50px 75px;
+    text-align: justify;
+}
+
+.community-form{
+    justify-self: center;
+    text-align: center;
+    top: 60px;
+    height: 325px;
+    width: 400px;  
+    padding: 50px;
+    z-index: 100;
+}
+
+.community-form .form-control{
+    margin: 30px 0;
+}
+
+.community-form input[type='text'],
+.community-form input[type='email'] {
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.community-form input:focus {
+    outline: none;
+}
+
+.community::before,
+.community::after {
+    content:'';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: white;
+    transform: skewY(-2deg);
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+}
+
+/* About */
+.FAQs{
+    background-color: white;
+    color: #333;
+    position: relative;
+    padding-top: 175px;
+    padding-bottom: 75px;
+}
+
+.FAQs .grid{
+    grid-template-columns: 1fr;
+}
+
+.FAQs .title-text p{
+    text-align: left;
+    padding-top: 0px;
+    padding-bottom: 40px;
+}
+
+.email-link{
+    color: var(--primary-color);
+}
+
+/* Footer */
+.footer{
+    text-align: center;
+    padding-bottom: 20px;
+    color: #333;
+    font-size: 15px;
+    }
+
+.fa-brands {
+    padding-top: 14px;
+    font-size: 20px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+  
+.fa-brands:hover {
+    opacity: 0.7;
+    }
+ 
+.fa-instagram {
+    background: #125688;
+    color: white;
+    }
+
+.fa-reddit-alien{
+    background: #ff5700;
+    color: white;
+    }
+
+.fa-twitter {
+    padding-top: 15px;
+    background: #55ACEE;
+    color: white;
+    }
+
+.fa-discord {
+    background: #7289DA;
+    color: white;
+    }
+
+/* Popup */
+.popup-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51,51,51,0.7);
+    position: absolute;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.popup{
+    margin: 100px;
+    height: 700px;
+    width: 500px;
+    background-color: var(--primary-color);
+    position: relative;
+}
+
+.popup .grid{
+    grid-template-columns: 1fr;
+}
+
+.popup .community-form.card{
+    height: 600px;
+}
+
+.community-form input[type='number']{
+    border: 0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;
+    padding: 3px;
+    font-size: 16px;
+}
+
+.closeButton{
+    font-size: 50px;
+    position: absolute;
+    top: 0;
+    right: 17px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.countdown{
+    color: #333;
+    position: relative;
+    margin: auto;
+    text-align: center;
+    font-size: 23px;
+    display: none;
+}
+
+
+
+
+/* Tablets & Under */
+@media(max-width: 1200px) {
+    .grid,
+    .showcase .grid,
+    .community .grid,
+    .FAQs .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    } 
+
+    .showcase .grid{
+        padding: 0;
+    }
+    
+    .showcase .grid >*:last-child{
+        display: none;
+    }
+
+    .showcase .title-text{
+        padding-top: 50px;
+        text-align: center;
+    }
+
+    .collection .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .collection .grid >*:first-child{
+        grid-column: 1/ span 2;
+    }
+
+    .collection .grid >*:last-child{
+        grid-column: 1/ span 2;
+    }
+
+    .community{
+        height: 1100px;
+    }
+
+    .community .grid{
+        padding: 0 200px;
+        gap: 20px;
+    }
+
+    .community .grid >*:first-child{
+        grid-column: 1;
+    }
+
+    .community .grid >*:last-child{
+        grid-column: 1;
+    }
+
+    .community .title-text h1{
+        padding-bottom: 20px;
+    }
+
+    .map-text{
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .community-form{
+        justify-self: center;
+        margin: auto;
+    }
+    .FAQs{
+        padding-top: 200px;
+    }
+}
+
+/* Mobile */
+@media(max-width: 768px) {
+    .navbar {
+        height: 125px;
+        padding-top: 20px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+    .community .grid{
+        padding: 0 100px;
+    }
+    .community .title-text h1{
+        padding-bottom: 20px;
+    }
+    .map-text{
+        font-size: 18px;
+    }
+    .FAQs{
+        padding-top: 100px;
+    }
+    .FAQs .title-text h1{
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 500px) {
+    .community{
+        height: 950px;
+    }
+    .community .grid{
+        padding: 0 50px;
+    }
+    .map-text{
+        font-size: 15px;
+    }
+    .community-form{
+        justify-self: center;
+        top: 45px;
+        height: 325px;
+        width: 300px;  
+        padding: 50px;
+    }
+    .community-form input[type='text'],
+    .community-form input[type='email'] {
+        font-size: 15px;
+    }
+    .footer{
+        font-size: 10px;
+    }
+    .fa-brands {
+        padding-top: 11px;
+        font-size: 10px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        text-decoration: none;
+        margin: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        }
+}
+
+@media(max-width: 425px) {
+    .collection .grid{
+        grid-template-columns: 1fr;
+    }
+    .collection .grid >*:first-child{
+        grid-column: 1;
+    }
+    .collection .grid >*:last-child{
+        grid-column: 1;
+        grid-row: 10;
+    }
+    .community-form{
+        justify-self: center;
+        top: 45px;
+        height: 325px;
+        width: 250px;  
+        padding: 50px;
+    }
+    .community-form h2{
+        font-size: 20px;
+    }
+    .community-form input[type='text'],
+    .community-form input[type='email'] {
+        font-size: 15px;
+    }
+}
+

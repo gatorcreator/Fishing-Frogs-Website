@@ -1,0 +1,235 @@
+/* Utilities */
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0 50px;
+}
+
+.card{
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 10px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.btn-outline{
+    background-color: transparent;
+    border: 1px white solid;
+}
+
+.btn:hover{
+    transform: scale(0.98);
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.title-text{
+    color:#333;
+    display: block;
+    text-align: center;
+}
+
+.title-text h1{
+    font-size: 55px;
+}
+
+.title-text h2{
+    padding: 20px 0;
+    font-size: 20px;
+    text-align: left;
+}
+
+.title-text p{
+    padding: 20px 0;
+    font-size: 20px;
+}
+
+@media(max-width: 1200px) {
+    .title-text h1{
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    .title-text h1{
+        font-size: 30px;
+    }
+    .title-text h2{
+        font-size: 18px;
+    }
+    .title-text p{
+        font-size: 18px;
+    }
+    .btn{
+        font-size: 18px;
+    }
+    
+}
+
+@media(max-width: 500px) {
+    .title-text h1{
+        font-size: 24px;
+    }
+    .title-text h2{
+        font-size: 15px;
+    }
+    .title-text p{
+        font-size: 15px;
+    }
+    .btn{
+        font-size: 15px;
+    } 
+}
+
+@media(max-width: 425px) {
+    .title-text h1{
+        font-size: 20px;
+    }
+    .title-text h2{
+        font-size: 13px;
+    }
+    .title-text p{
+        font-size: 13px;
+    }
+    .btn{
+        font-size: 13px;
+    } 
+}
+
+/* 
+.header{
+    min-height: 100vh;
+    width: 100%; 
+    background-color: rgb(196, 234, 209);
+    background-image: url(images/frog.gif);
+    background-size: 50vh;
+    background-repeat: no-repeat;
+    background-position: 100% 87%
+}
+nav{
+    display: flex;
+    padding: 1% 2%;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    background-size: contain;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    font-size: 35px;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 50px;
+    position: relative;
+}
+.nav-links ul li:after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background: rgb(196, 234, 209);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover:after{
+    width: 100%;
+}
+.wallet-btn{
+    display: inline-block;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 15px 60px;
+    margin: 8px 0px 0px 15px;
+    font-size: 35px;
+    background: rgb(73, 206, 80);
+    box-shadow: 3px 3px 3px rgb(215,215,215);
+}
+.wallet-btn:hover{
+    border: 2px solid rgb(73, 206, 80);
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.content ul li{
+    list-style: none;
+    position: absolute;
+    text-align: center;
+    top: 32%;
+    left: 2%;
+}
+.text-title{
+    font-size: 100px;
+}
+.text{
+    font-size: 40px;
+    margin: 200px 0px 0px 0px;
+}
+.content ul li a{
+    margin-top: 350px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 25px 40px;
+    font-size: 33px;
+    border-radius: 5px;
+    position: relative;
+}
+.mint-btn{
+    border: 2px solid rgb(73, 206, 80);
+    color: white;
+    background: rgb(73, 206, 80);
+}
+.browse-btn{
+    border: 2px solid black;
+    color: black;
+    margin: 0px 0px 0px 450px;
+    background: rgb(196, 234, 209);
+}
+
+/*
